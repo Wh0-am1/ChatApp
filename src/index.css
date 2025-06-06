@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --color-primary-dark: #101a20;
+    --color-primary-light: #ffffff;
+    --color-secondary-dark: #202c33;
+    --color-secondary-light: #f0f2f5;
+    --color-lightText: #42515a;
+}
+
+.HoverRound {
+    @apply hover:dark:bg-gray-600 hover:bg-gray-300 rounded-full;
+}
+
+.TransitionWidth {
+    transition: width 300ms ease-in-out;
+}
+
+* {
+    @apply transition-colors duration-300;
+}
+
+.icons li {
+    @apply relative p-2 hover:dark:bg-gray-600 hover:bg-gray-300 rounded-full;
+}
+
+.icons li span.tooltip {
+    @apply absolute z-10 left-10 bottom-[1px] dark:bg-white bg-secondary-dark text-white dark:text-black rounded-2xl px-3 py-1.5 text-xs scale-0 group-hover:scale-100 group-hover:duration-100 group-hover:delay-300 transition-transform duration-0 delay-0 origin-left;
+}
+
+.folderHover:hover {
+    @apply text-secondary-dark bg-gray-300;
+    transition:
+        color 300ms,
+        background 600ms;
+}
+
+.noScroll {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.themeMode {
+    transform: translateY(-105%);
+    transition: transform 300ms;
+}
+
+.dark .themeMode {
+    transform: translateY(8%);
+}
+
+.noScroll::-webkit-scrollbar {
+    display: none;
+}
+
+.LineRemoving:hover::before {
+    transform: scaleX(1);
+}
+
+.LineRemoving::before {
+    content: "";
+    position: absolute;
+    background-color: #364153;
+    width: 100%;
+    height: 1px;
+    top: -1px;
+    left: 0;
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 250ms ease-in-out;
+}
+
+.dark .LineRemoving::before {
+    background-color: #d1d5dc;
+}
+
+.Scroll::-webkit-scrollbar {
+    width: 5px;
+    background: transparent;
+}
+
+.Scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.Scroll::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background-color: transparent;
+}
+
+.Scroll:hover::-webkit-scrollbar-thumb {
+    background: gray;
+}
+
+.Transition {
+    transition: transform 300ms;
+}
+
+.Scale0 {
+    transform: scale(0);
+}
+
+.Scale100 {
+    transform: scale(1);
+}
