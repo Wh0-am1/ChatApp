@@ -1,4 +1,4 @@
-function Chat(props: React.SVGProps<SVGSetElement>) {
+function Chat(props: React.SVGProps<SVGSVGElement>) {
     return (
         <svg
             width="800px"

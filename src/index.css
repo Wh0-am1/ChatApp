@@ -6,12 +6,16 @@
     --color-primary-dark: #101a20;
     --color-primary-light: #ffffff;
     --color-secondary-dark: #202c33;
-    --color-secondary-light: #f0f2f5;
+    --color-secondary-light: #e5e7eb;
     --color-lightText: #42515a;
 }
 
 .HoverRound {
     @apply hover:dark:bg-gray-600 hover:bg-gray-300 rounded-full;
+}
+
+.Extra div {
+    @apply p-1.5 cursor-pointer;
 }
 
 .TransitionWidth {

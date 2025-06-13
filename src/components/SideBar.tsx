@@ -5,9 +5,10 @@ import Channels from "../Icons/Channels";
 import Settings from "../Icons/Settings";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+import NotifyCircle from "./NotifyCircle";
 
 type PROPTYPE = {
-    setDark: (value: boolean) => void;
+    setDark: React.Dispatch<React.SetStateAction<boolean>>;
     Dark: boolean;
     setShowBar: (value: boolean) => void;
     ShowBar: boolean;
@@ -32,6 +33,7 @@ function SideBar({ setDark, Dark, setShowBar, ShowBar }: PROPTYPE) {
                             <li className="group ">
                                 <Chat height={"1.5rem"} width={"1.5rem"} />
                                 <span className="tooltip">tooltip</span>
+                                <NotifyCircle />
                             </li>
                             <li className="group">
                                 <Status height={"1.5rem"} width={"1.5rem"} />
@@ -49,7 +51,10 @@ function SideBar({ setDark, Dark, setShowBar, ShowBar }: PROPTYPE) {
                     </div>
                     <div className="pb-3">
                         <ul className="icons flex flex-col gap-3">
-                            <li className="group" onClick={() => setDark((prev) => !prev)}>
+                            <li
+                                className="group"
+                                onClick={() => setDark((prev: boolean): boolean => !prev)}
+                            >
                                 <div className="relative h-6 rounded-full overflow-hidden">
                                     <div className="absolute h-full">
                                         <div className="flex flex-col h-full justify-between themeMode">
