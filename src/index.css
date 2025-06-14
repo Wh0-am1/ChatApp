@@ -18,12 +18,8 @@
     @apply p-1.5 cursor-pointer;
 }
 
-.TransitionWidth {
-    transition: width 300ms ease-in-out;
-}
-
 * {
-    @apply transition-colors duration-300;
+    @apply transition-all duration-200;
 }
 
 .icons li {
