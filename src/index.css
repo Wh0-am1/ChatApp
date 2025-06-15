@@ -27,7 +27,7 @@
 }
 
 .icons li span.tooltip {
-    @apply absolute z-10 left-10 bottom-[1px] dark:bg-white bg-secondary-dark text-white dark:text-black rounded-2xl px-3 py-1.5 text-xs scale-0 group-hover:scale-100 group-hover:duration-100 group-hover:delay-300 transition-transform duration-0 delay-0 origin-left;
+    @apply absolute z-20 left-10 bottom-[1px] dark:bg-white bg-secondary-dark text-white dark:text-black rounded-2xl px-3 py-1.5 text-xs scale-0 group-hover:scale-100 group-hover:duration-100 group-hover:delay-300 transition-transform duration-0 delay-0 origin-left;
 }
 
 .folderHover:hover {
