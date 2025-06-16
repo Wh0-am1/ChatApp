@@ -7,7 +7,7 @@ import PlaneTap from "../Icons/PlaneTap";
 function MessageBar() {
     const [Text, setText] = useState("");
     return (
-        <div className="flex gap-3 justify-between items-center  w-full dark:bg-secondary-dark bg-gray-200 h-16 lg:px-16 md:px-5 px-3 text-lightText dark:text-gray-400">
+        <div className="flex py-3 gap-3 justify-between items-center  w-full dark:bg-secondary-dark bg-gray-200 h-16 lg:px-16 md:px-5 px-3 text-lightText dark:text-gray-400">
             <div className="cursor-pointer">
                 <FontAwesomeIcon icon={faPuzzlePiece} size="xl" />
             </div>
